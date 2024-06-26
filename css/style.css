@@ -106,7 +106,7 @@ nav > ul{
 nav > ul > li{
     list-style: none;
     color: var(--white);
-    margin: 0px 30px;
+    margin: 0px 10px;
     font-size: 13px;
     color: var(--gray-text);
     font-weight: bold;
@@ -145,7 +145,6 @@ nav > ul > li > span{
     margin-bottom: 50px;
     width: 100%;
     margin-top: 35px;
-    padding-right: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -328,14 +327,14 @@ footer > .mid-col{
 */
 
 .right-col{
-    display: flex;
-    justify-content: flex-end;
     padding-right: 10px;
 }
 
-.icon{
+.icon{ 
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .icon > i{
@@ -354,7 +353,67 @@ footer > .mid-col{
 }
 
 
- /* 
-                    DEBUG
- */
+/* 
+                    RESPONSIVE
+*/
 
+
+/* TABLET (878PX) */
+
+@media screen and (max-width:878px) {
+
+    nav > ul{
+        width: 100%;
+    }
+
+    .my-row{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .my-col{
+        width: calc(100% / 4 - 20px);
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    #minute > .bar{
+        margin: 0 20px;
+    }
+
+    .icon > i{
+        margin-right: 10px;
+    }
+}
+
+
+
+
+
+/* TABLET (639PX) */
+
+@media screen and (max-width:639px) {
+
+    nav > ul{
+        width: 100%;
+    }
+
+    .my-row{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .my-col{
+        width: calc(100% / 2 - 20px);
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    #minute > .bar{
+        margin: 0 10px;
+    }
+
+    .icon > i{
+        margin-right: 5px;
+    }
+}
