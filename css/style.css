@@ -9,6 +9,9 @@
     font-family: "Montserrat", sans-serif;
 }
 
+img{
+    width: 100%;
+}
 /* 
                     BACKGROUND
 */
@@ -80,6 +83,7 @@ main{
     width: calc(100vw - 200px);
     height: calc(100vh - 80px - 78px);
     padding: 0 20px 20px;
+    overflow-y: scroll;
 }
 
 /* 
@@ -127,27 +131,49 @@ nav > ul > li > span{
 
 .recently{
     padding-top: 20px;
+    width: 100%;
 }
 
 .title{
     color: var(--white);
     font-size: 25px;
-    font-weight: bold;
-    width: 100%;    
+    font-weight: bold;   
 }
 
 .my-row{
+    margin-bottom: 50px;
+    width: 100%;
+    margin-top: 35px;
+    padding-right: 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .my-col{
-    width: calc(100% / 6 - 20px);
+    width: calc(100% / 6 - 10px);
 }
 
-.playlist{
-    width: 100%;
+.text-song{
+    text-align: center;
+    margin-top: 10px;
+    line-height: 25px;
+    height: 90px;
+}
 
+.title-song{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.artist-song, .subtitle{
+    font-size: 10px;
+    color: var(--gray-text);
+    font-weight: bold;
+}
+
+.subtitle{
+    margin-top: 10px;
 }
 
  /* 
