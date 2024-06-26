@@ -50,7 +50,7 @@ img{
  */
 
 main{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     background-color: var(--blue);
     display: flex;
     justify-content: flex-end;
@@ -81,7 +81,7 @@ main{
 
 .container-spotify{
     width: calc(100vw - 200px);
-    height: calc(100vh - 80px - 78px);
+    height: calc(100vh - 100px - 78px);
     padding: 0 20px 20px;
     overflow-y: scroll;
 }
@@ -191,7 +191,7 @@ nav > ul > li > span{
 aside{
     background-color: var(--black);
     width: 200px;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     position: fixed;
     left: 0;
     top: 0;
@@ -203,8 +203,8 @@ aside{
 
 footer{
     display: flex;
-    justify-content: space-between;
-    height: 80px;
+    align-items: center;
+    height: 100px;
     width: 100vw;
     background-color: var(--gray);
     position: fixed;
@@ -215,6 +215,7 @@ footer{
 .left-col, .right-col{
     display: flex;
     align-items: center;
+    width: 25%;
 }
 
 /* 
@@ -226,7 +227,7 @@ footer > .left-col{
 }
 
 footer > .left-col > img{
-    width: 6%;
+    width: 50px;
 }
 
 footer > .left-col > .text-song{
@@ -260,15 +261,97 @@ footer > .left-col > .react > i{
 
 footer > .mid-col{
     width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0; 
+}
+
+.player{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player > i:not(.fa-circle-play){
+    color: var(--white);
+    font-size: 20px;
+}
+
+.fa-circle-play{
+    font-size: 35px;
+    color: var(--white);
 }
 
 #minute{
-    width: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#minute > div:not(.bar){
+    color: var(--white);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#minute > .bar{
+    width: 60%;
+}
+
+.bar{
+    height: 4px;
+    background-color: var(--gray-text);
+    border-radius: 4px;
+    margin: 0 30px;
+    position: relative;
+}
+
+#minute > .bar > .white-bar{
+    width: 20%;
+}
+
+.white-bar{
+    height: 4px;
+    background-color: var(--white);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 /* 
                 RIGHT COL
 */
+
+.right-col{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+.icon > i{
+    color: var(--white);
+    font-size: 13px;
+    margin-right: 15px;
+}
+
+.right-col > .icon > .bar{
+    width: 120px;
+    margin: 0;
+}
+
+.right-col > .icon > .bar > .white-bar{
+    width: 20%;
+}
 
 
  /* 
