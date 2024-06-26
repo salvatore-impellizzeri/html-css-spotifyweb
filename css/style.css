@@ -6,22 +6,176 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* 
-                    HEADER
- */
+                    BACKGROUND
+*/
 
+:root{
+    --dark-blue:#05060a81;
+    --blue: #141922;
+    --black: #000000;
+    --gray: #282828;
+    --slime: #ADFF2F;
+}
+
+/* 
+                    COLOR
+*/
+
+:root{
+    --gray-text: #74767B;
+    --white: #FFFFFF;
+}
+
+/* 
+                    BUTTON
+*/
+
+.button{
+    border-radius: 20px;
+    padding: 10px 35px;
+    background-color: #00000000;
+    border: 1px solid white;
+    color: var(--white);
+}
 
  /* 
                     MAIN
  */
 
+main{
+    height: calc(100vh - 80px);
+    background-color: var(--blue);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 
+             CONTAINER-MAIN
+*/
+
+.container-main{
+    width: calc(100vw - 200px);
+}
+
+/* 
+            UPGRADE
+*/
+
+.upgrade{
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 5px;
+    background-color: var(--dark-blue);
+}
+
+/* 
+            CONTAINER-SPOTIFY
+*/
+
+.container-spotify{
+    width: calc(100vw - 200px);
+    height: calc(100vh - 80px - 78px);
+    padding: 0 20px 20px;
+}
+
+/* 
+            NAV
+*/
+
+nav{
+    line-height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+nav > ul{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav > ul > li{
+    list-style: none;
+    color: var(--white);
+    margin: 0px 30px;
+    font-size: 13px;
+    color: var(--gray-text);
+    font-weight: bold;
+}
+
+nav > ul > li > span{
+    position: relative;
+}
+
+.selection{
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% - 35% / 2);
+    width: 35%;
+    height: 2px;
+    background-color: var(--slime);
+}
+
+/* 
+            RECENTLY PLAYED
+*/
+
+.recently{
+    padding-top: 20px;
+}
+
+.title{
+    color: var(--white);
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;    
+}
+
+.my-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-col{
+    width: calc(100% / 6 - 20px);
+}
+
+.playlist{
+    width: 100%;
+
+}
+
+ /* 
+            ASIDE
+ */
+
+aside{
+    background-color: var(--black);
+    width: 200px;
+    height: calc(100vh - 80px);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
 
  /* 
                     FOOTER
  */
+
+footer{
+    height: 80px;
+    width: 100vw;
+    background-color: var(--gray);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
 
  /* 
                     DEBUG
