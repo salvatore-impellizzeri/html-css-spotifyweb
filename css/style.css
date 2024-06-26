@@ -141,6 +141,7 @@ nav > ul > li > span{
 }
 
 .my-row{
+    min-height: 100px;
     margin-bottom: 50px;
     width: 100%;
     margin-top: 35px;
@@ -150,14 +151,13 @@ nav > ul > li > span{
 }
 
 .my-col{
-    width: calc(100% / 6 - 10px);
+    width: calc(100% / 6 - 15px);
 }
 
 .text-song{
     text-align: center;
     margin-top: 10px;
     line-height: 25px;
-    height: 90px;
 }
 
 .title-song{
@@ -177,6 +177,14 @@ nav > ul > li > span{
 }
 
  /* 
+            ARTISTI PIU' POPOLARI
+ */
+
+.circle{
+    border-radius: 50%;
+}
+
+ /* 
             ASIDE
  */
 
@@ -189,12 +197,13 @@ aside{
     top: 0;
 }
 
-
- /* 
-                    FOOTER
- */
+/* 
+                    PLAYER
+*/
 
 footer{
+    display: flex;
+    justify-content: space-between;
     height: 80px;
     width: 100vw;
     background-color: var(--gray);
@@ -202,6 +211,65 @@ footer{
     left: 0;
     bottom: 0;
 }
+
+.left-col, .right-col{
+    display: flex;
+    align-items: center;
+}
+
+/* 
+                LEFT COL
+*/
+
+footer > .left-col{
+    padding-left: 10px;
+}
+
+footer > .left-col > img{
+    width: 6%;
+}
+
+footer > .left-col > .text-song{
+    min-width: 20px;
+    margin-left: 10px;
+    margin-top: 0;
+    line-height: 15px;
+}
+
+footer > .left-col > .text-song > .title-song{
+    font-size: 12px;
+    text-align: left;
+}
+
+footer > .left-col > .text-song > .artist-song{
+    font-size: 10px;
+}
+
+footer > .left-col > .react{
+    margin-left: 40px;
+}
+
+footer > .left-col > .react > i{
+    color: var(--gray-text);
+    margin-right: 10px;
+}
+
+/* 
+                MID COL
+*/
+
+footer > .mid-col{
+    width: 50%;
+}
+
+#minute{
+    width: 50%;
+}
+
+/* 
+                RIGHT COL
+*/
+
 
  /* 
                     DEBUG
