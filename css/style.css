@@ -127,6 +127,7 @@ nav > ul > li{
     color: var(--gray-text);
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.1s ease-in-out;
 }
 
 nav > ul > li > span{
@@ -308,6 +309,13 @@ footer > .left-col > .text-song > .title-song{
 
 footer > .left-col > .text-song > .artist-song{
     font-size: 10px;
+    cursor: default;
+    transition: all 0.1s ease-in-out;
+}
+
+footer > .left-col > .text-song > .artist-song:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 footer > .left-col > .react{
@@ -315,8 +323,14 @@ footer > .left-col > .react{
 }
 
 footer > .left-col > .react > i{
+    cursor: pointer;
     color: var(--gray-text);
     margin-right: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+footer > .left-col > .react > i:hover{
+    color: white;
 }
 
 /* 
@@ -342,11 +356,18 @@ footer > .mid-col{
 .player > i:not(.fa-circle-play){
     color: var(--white);
     font-size: 20px;
+    cursor: pointer;
 }
 
-.fa-circle-play{
+.player > .fa-circle-play{
+    cursor: pointer;
     font-size: 35px;
     color: var(--white);
+    transition: scale 0.1s ease-in-out;
+}
+
+.player > .fa-circle-play:hover{
+    scale: 1.2;
 }
 
 #minute{
@@ -367,6 +388,7 @@ footer > .mid-col{
 }
 
 .bar{
+    cursor: pointer;
     height: 4px;
     background-color: var(--gray-text);
     border-radius: 4px;
@@ -385,6 +407,27 @@ footer > .mid-col{
     position: absolute;
     left: 0;
     top: 0;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.bar .fa-circle{
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 20%;
+    transform: translate(-50%, calc(2px - 50%));
+    cursor: pointer;
+    display: none;
+}
+
+.bar:hover .fa-circle{
+    display: block;
+}
+
+.bar:hover .white-bar{
+    background-color: var(--slime);
 }
 
 /* 
