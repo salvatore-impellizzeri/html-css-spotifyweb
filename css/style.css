@@ -64,8 +64,6 @@ button:hover{
 main{
     height: calc(100vh - 100px);
     background-color: var(--blue);
-    display: flex;
-    justify-content: flex-end;
 }
 
 /* 
@@ -92,6 +90,214 @@ main{
     position: sticky;
     top: 0;
     right: 0;
+}
+
+ /* 
+            ASIDE
+ */
+
+ aside{
+    background-color: var(--black);
+    width: 250px;
+    height: 100%;
+    min-height: 400px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+aside a{
+    text-decoration: none;
+    transition: color 0.1s ease-in-out;
+}
+
+aside a:hover{
+    color: var(--white);
+}
+
+.menu{
+    min-height: 400px;
+    width: 100%;
+}
+
+/* LOGO */
+
+.logo{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+
+.logo img{
+    width: 80%;
+}
+
+.mobile{
+    display: none;
+}
+
+
+/* MENU */
+
+.home, .search, .library{
+    width: 100%;
+    height: 40px;
+    padding: 5px 20px;
+}
+
+.home a,
+.search a,
+.library a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-list a{
+    transition: all 0.1s ease-in-out;
+}
+
+.menu-list a:hover *{
+    color: var(--white);
+    fill: var(--white);
+}
+
+.home{
+    border-left: var(--slime) 4px solid;
+    padding-left: 16px;
+}
+
+.home .subtitle{
+    color: var(--white);
+}
+
+.menu-list{
+    width: 100%;
+}
+
+.menu-list svg{
+    width: 30px;
+    margin-right: 5px;
+}
+
+aside .subtitle{
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+/* PLAYLIST */
+
+.playlist{
+    padding: 20px 20px;
+}
+
+.playlist > .title{
+    font-size: 15px;
+}
+
+.create-playlist{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.create-playlist > a{
+    display: flex;
+    align-items: center;
+}
+
+.create-playlist > *{
+    transition: all 0.1s ease-in-out;
+}
+
+.create-playlist .fa-plus{
+    color: var(--black);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 7px;
+    background-color: var(--lightgray);
+    margin-right: 10px;
+}
+
+.create-playlist:hover .fa-plus{
+    background-color: var(--white);
+}
+
+.create-playlist:hover .subtitle{
+    color: var(--white);
+}
+
+/* LISTA */
+
+.playlist-list li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.playlist-list{
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+.playlist-list ul li:last-child{
+    margin-bottom: 0;
+}
+
+/* FOOTER-MENU */
+
+.footer-menu{
+    width: 100%;
+    padding: 0px 20px 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.download{
+    display: flex;
+    align-items: center;
+}
+
+.footer-menu .fa-circle-down{
+    color: var(--lightgray);
+    font-size: 12px;
+    margin-right: 10px;
+    transition: color 0.1s ease-in-out;
+}
+
+.download:hover .fa-circle-down{
+    color: var(--white);
+}
+
+.download:hover .subtitle{
+    transition: color 0.1s ease-in-out;
+}
+
+.download > .subtitle:hover{
+    color: var(--white);
+}
+
+.footer-menu > .hr{
+    margin: 10px 0;
+    font-weight: 100;
+    height: 1px;
+    background-color: var(--gray-text);
+    width: 100%;
+}
+
+.footer-menu > .user-box{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-color: var(--gray-text);
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.footer-menu > .title{
+    font-size: 15px;
 }
 
 /* 
@@ -251,201 +457,6 @@ nav > ul > li:hover{
 
 .circle{
     border-radius: 50%;
-}
-
- /* 
-            ASIDE
- */
-
-aside{
-    background-color: var(--black);
-    width: 250px;
-    height: calc(100vh - 100px);
-    min-height: 400px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-aside a{
-    text-decoration: none;
-    transition: color 0.1s ease-in-out;
-}
-
-aside a:hover{
-    color: var(--white);
-}
-
-.menu{
-    min-height: 400px;
-    width: 100%;
-}
-
-/* LOGO */
-
-.logo{
-    width: 100%;
-    height: 100px;
-    padding: 20px;
-}
-
-.logo img{
-    width: 80%;
-}
-
-/* MENU */
-
-.home, .search, .library{
-    width: 100%;
-    height: 40px;
-    padding: 5px 20px;
-}
-
-.home a,
-.search a,
-.library a{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.menu-list a{
-    transition: all 0.1s ease-in-out;
-}
-
-.menu-list a:hover *{
-    color: var(--white);
-    fill: var(--white);
-}
-
-.home{
-    border-left: var(--slime) 4px solid;
-    padding-left: 16px;
-}
-
-.home .subtitle{
-    color: var(--white);
-}
-
-.menu-list{
-    width: 100%;
-}
-
-.menu-list svg{
-    width: 30px;
-    margin-right: 5px;
-}
-
-aside .subtitle{
-    font-weight: 600;
-    font-size: 15px;
-    margin-top: 0;
-}
-
-/* PLAYLIST */
-
-.playlist{
-    padding: 20px 20px;
-}
-
-.playlist > .title{
-    font-size: 15px;
-}
-
-.create-playlist{
-    margin-top: 10px;
-}
-
-.create-playlist > a{
-    display: flex;
-    align-items: center;
-}
-
-.create-playlist > *{
-    transition: all 0.1s ease-in-out;
-}
-
-.create-playlist .fa-plus{
-    color: var(--black);
-    font-weight: bold;
-    font-size: 20px;
-    padding: 5px 7px;
-    background-color: var(--lightgray);
-    margin-right: 10px;
-}
-
-.create-playlist:hover .fa-plus{
-    background-color: var(--white);
-}
-
-.create-playlist:hover .subtitle{
-    color: var(--white);
-}
-
-/* LISTA */
-
-.playlist-name li{
-    list-style: none;
-    margin: 20px 0;
-}
-
-/* FOOTER-MENU */
-
-.footer-menu{
-    width: 100%;
-    padding: 0px 20px 10px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.download{
-    display: flex;
-    align-items: center;
-}
-
-.footer-menu .fa-circle-down{
-    color: var(--lightgray);
-    font-size: 12px;
-    margin-right: 10px;
-    transition: color 0.1s ease-in-out;
-}
-
-.download:hover .fa-circle-down{
-    color: var(--white);
-}
-
-.download:hover .subtitle{
-    transition: color 0.1s ease-in-out;
-}
-
-.download > .subtitle:hover{
-    color: var(--white);
-}
-
-.footer-menu > .hr{
-    margin: 10px 0;
-    font-weight: 100;
-    height: 1px;
-    background-color: var(--gray-text);
-    width: 100%;
-}
-
-.footer-menu > .user-box{
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    background-color: var(--gray-text);
-    border-radius: 50%;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.footer-menu > .title{
-    font-size: 15px;
 }
 
 /* 
@@ -709,5 +720,95 @@ footer > .mid-col{
 
     .icon > i{
         margin-right: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+/* MOBILE (552PX) */
+
+@media screen and (max-width: 552px) {
+
+    .container-main{
+        width: calc(100% - 50px);
+        height: 100%;
+    }
+
+    .container-spotify{
+        width: calc(100vw - 50px);
+    }
+
+    .upgrade{
+        width: calc(100vw - 50px);
+    }
+
+    aside{
+        width: 50px;
+        padding: 10px;
+        justify-content: center;
+    }
+    
+    .mobile{
+        display: block;
+    }
+
+    aside svg, 
+    .logo img{
+        width: 100%;
+    }
+
+    .menu-list svg{
+        margin-right: 0px;
+    }
+
+    aside .subtitle,
+    aside .title,
+    aside .fa-plus,
+    aside .hr{
+        display: none;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .home,
+    .search,
+    .library,
+    .logo,
+    .footer-menu{
+        padding: 0;
+    }
+
+    .home{
+        border-left: 0;
+    }
+
+    .footer-menu > .user-box{
+        margin-right: 0;
+    }
+
+    .footer-menu .fa-circle-down{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-menu{
+        justify-content: center;
+    }
+
+    .logo{
+        height: fit-content;
+        margin-bottom: 30px;
+    }
+
+    .logo > a{
+        display: flex;
+        justify-content: center;
     }
 }
